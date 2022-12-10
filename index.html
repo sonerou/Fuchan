@@ -19,18 +19,6 @@
             highlightStroke: "rgba(255,64,64,1)",   // マウスが載った際の枠線の色
             data : [ 180, 30, 40, 45, 60, 70 , 80 ]     // 各棒の値(カンマ区切りで指定)
          },
-         options: {
-      tooltips: {
-        callbacks: {
-          label: function (tooltipItem, data) {
-            return data.labels[tooltipItem.index]
-              + ": "
-              + data.datasets[0].data[tooltipItem.index]
-              + " 分"; //ここで単位を付けます
-          }
-        }
-      }
-    }
       ]
 
    }
