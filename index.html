@@ -8,9 +8,9 @@
 <canvas id="graph-area" height="450" width="600"></canvas>
 <script type="text/javascript">
 
-   // ▼グラフの中身
-   var barChartData = {
-      
+   window.onload = function(){
+      var ctx = document.getElementById("graph-area").getContext("2d");
+      window.myBar = new Chart(ctx, {
       labels : ["12月7日","いつか","いつか","いつか","いつか","いつか","いつか"],
       datasets : [
          {
@@ -31,12 +31,9 @@
       ],
 
    };
-
-   // ▼上記のグラフを描画するための記述
-   window.onload = function(){
-      var ctx = document.getElementById("graph-area").getContext("2d");
-      window.myBar = new Chart(ctx).(barChartData);
    }
+  
+
 
 </script>
 </body>
