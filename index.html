@@ -40,32 +40,20 @@ document.getElementById("day0929").innerHTML
    </table>
 <br>
 <input type="button" value="パスワードを入力" onclick="gate();">
+<canvas id="mychart"></canvas>
 <script type="text/javascript">
-
-   window.onload = function(){
-      var ctx = document.getElementById("graph-area").getContext("2d");
-      window.myBar = new Chart(ctx, {
-      labels : ["12月7日","いつか","いつか","いつか","いつか","いつか","いつか"],
-      datasets : [
-         {
-            type: 'bar',
-            label: '累計時間',
-            fillColor : "rgba(240,128,128,0.6)",    // 塗りつぶし色
-            strokeColor : "rgba(240,128,128,0.9)",  // 枠線の色
-            highlightFill: "rgba(255,64,64,0.75)",  // マウスが載った際の塗りつぶし色
-            highlightStroke: "rgba(255,64,64,1)",   // マウスが載った際の枠線の色
-            data : [ 180, 200, 40, 45, 60, 70 , 80 ]     // 各棒の値(カンマ区切りで指定)
-         },{
-    type: 'line',
-    label: '時間',
-    data: [180, 10.2, 13.5, 16.7, 20.4, 24.2, 28.9, 27.5, 25.9, 21.0, 13.9, 9.1],
-    backgroundColor: "rgba(255, 99, 132, 0.5)",
-    borderColor: "rgba(255, 99, 132, 0.5)",
-         },
-      ],
-
-   };
-                               }
+var ctx = document.getElementById('mychart-pie');
+var myChart = new Chart(ctx, {
+  type: 'pie',
+  data: {
+    labels: ['Red', 'Green', 'Blue'],
+    datasets: [{
+      data: [10, 20, 30],
+      backgroundColor: ['#f88', '#484', '#48f'],
+      weight: 100,
+    }],
+  },
+});
 </script>
   
 </body>
