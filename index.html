@@ -6,7 +6,6 @@ p{text-align: center;
  }
 </style>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 </head>
 <body>
   <script>
@@ -43,8 +42,9 @@ document.getElementById("day0929").innerHTML
 <div>
  <canvas id="mychart"></canvas>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 <script>
- const ctx = document.getElementById('myChart');
+ var ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
     type: 'bar',
