@@ -44,11 +44,56 @@ document.getElementById("day0929").innerHTML
 <div>
   <canvas id="myLineChart"></canvas>
 </div>
+<div>
+	  <canvas id="myChart"></canvas>
+</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
   
   <script>
   var ctx = document.getElementById("myLineChart");
   var myLineChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['12月7日', '12月25日'],
+      datasets: [
+        {
+          label: '時間',
+          data: [165, 434],
+          borderColor: "rgba(255,0,0,100)",
+          backgroundColor: "rgba(255,0,0,100)"
+        },
+        {
+          label: '累計時間',
+          data: [165, 599,],
+          borderColor: "rgba(0,0,255,100)",
+          backgroundColor: "rgba(0,0,255,100)"
+        }
+      ],
+    },
+    options: {
+      title: {
+        display: true,
+        text: '分'
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            suggestedMax: 650,
+            suggestedMin: 0,
+            stepSize: 100,
+            callback: function(value, index, values){
+              return  value +  '分'
+            }
+          }
+        }]
+      },
+    }
+  });
+  </script>
+
+  <script>
+  var ctx = document.getElementById("myLineChart");
+  var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
       labels: ['12月7日', '12月25日'],
