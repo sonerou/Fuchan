@@ -2,12 +2,48 @@
 <html lang="ja">
 
 <head>
-  <meta charset="utf-8">
-　<title>グラフ</title> 
+<style>
+p{text-align: center;
+ }
+</style>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+　<title>みやふー</title> 
 </head>
 <body>
-  <h1>折れ線グラフ</h1>
+ <script>
+  window.onload = function(){
+  const timeStamp = Date.now() - new Date("2022/9/29").getTime();
+const elapsedHour  = Math.floor( timeStamp / 86400000 );
+document.getElementById("day0929").innerHTML
+          = elapsedHour;}
+ </script>
+ <script type="text/javascript">
+   function gate() {
+      var UserInput = prompt("パスワードを入力して下さい:","");
+      location.href = UserInput + ".html";
+   }
+</script>
+<h2>ふう</h2>
+ <p id="day0929"></p>
+<h3><font color="red">残り 98回</font>&emsp;<font color="blue">残り 9401分</font></h3>
+ <table border="1">
+  <tr><th>回数</th><td style="text-align:center;">1</td><td style="text-align:center;">2</td><td style="text-align:center;">3</td></tr>
+      <tr><th>日付</th><td>12/7</td><td>12/25</td><td>いつか</td></tr>
+     <tr><th>場所</th><td>京都</td><td>浜松</td><td></td></tr>
+   <tr><th>ハイライト</th><td>絶対方位<br>フォトスポット</td><td>遠鉄バス<br>蕎麦<br><br></td><td></td></tr>
+       <tr><th>時間(分)</ht><td>165</td><td>434</td><td></td></tr>
+   <tr><th>累計時間</ht><td>165</td><td>599</td><td></td></tr>
+   <tr><th>女→男</th><td>爪切り(貝印)</td><td>シャー芯×3</td><td></td></tr>
+   <tr><th>男→女</th><td>ティッシュ(鼻セレブ)</td><td>缶バッチ<br>予備校消しゴム</td><td></td></tr>
+   <tr><th>じゃんけん</th><td>なし</td><td>女勝ち</td><td></td></tr>
+   <tr><th>女勝利数</th><td>0</td><td>1</td><td></td></tr>
+   <tr><th>男勝利数</th><td>0</td><td>0</td><td></td></tr>
+   </table>
+<br>
+<input type="button" value="パスワードを入力" onclick="gate();">
+<div>
   <canvas id="myLineChart"></canvas>
+</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
   
   <script>
