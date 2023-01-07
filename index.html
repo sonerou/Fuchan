@@ -6,7 +6,7 @@ p{text-align: center;
  }
 </style>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <script>
@@ -41,20 +41,27 @@ document.getElementById("day0929").innerHTML
 <br>
 <input type="button" value="パスワードを入力" onclick="gate();">
 <canvas id="mychart"></canvas>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
-<script type="text/javascript">
-var ctx = document.getElementById('mychart-pie');
-var myChart = new Chart(ctx, {
-  type: 'pie',
-  data: {
-    labels: ['Red', 'Green', 'Blue'],
-    datasets: [{
-      data: [10, 20, 30],
-      backgroundColor: ['#f88', '#484', '#48f'],
-      weight: 100,
-    }],
-  },
-});
+<script>
+ const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
 </script>
   
 </body>
