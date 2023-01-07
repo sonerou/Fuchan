@@ -73,7 +73,7 @@ document.getElementById("day0929").innerHTML
     options: {
       title: {
         display: true,
-        text: '分'
+        text: '目指せ10000分'
       },
       scales: {
         yAxes: [{
@@ -82,7 +82,7 @@ document.getElementById("day0929").innerHTML
             suggestedMin: 0,
             stepSize: 100,
             callback: function(value, index, values){
-              return  value +  '目指せ10000分'
+              return  value +  '分'
             }
           }
         }]
@@ -104,7 +104,13 @@ document.getElementById("day0929").innerHTML
           backgroundColor: ['rgb(255, 99, 132)',
       'rgb(54, 162, 235)'],
     }
-  ]}});
+  ]},
+  options: {
+      title: {
+        display: true,
+        text: '目指せ10000分'
+      },}
+  });
   </script>
 </body>
 
