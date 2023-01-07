@@ -82,7 +82,7 @@ document.getElementById("day0929").innerHTML
             suggestedMin: 0,
             stepSize: 100,
             callback: function(value, index, values){
-              return  value +  ''
+              return  value +  '目指せ10000分'
             }
           }
         }]
@@ -94,28 +94,19 @@ document.getElementById("day0929").innerHTML
   <script>
   var ctx = document.getElementById("myChart");
   var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'pie',
     data: {
-      labels: ['12月7日', '12月25日'],
+      labels: ['女', '男'],
       datasets: [
         {
-          label: '時間',
-          data: [165, 434],
-          borderColor: "rgba(255,0,0,100)",
-          backgroundColor: "rgba(255,0,0,100)"
-        },
-        {
-          label: '累計時間',
-          data: [165, 599,],
-          borderColor: "rgba(0,0,255,100)",
-          backgroundColor: "rgba(0,0,255,100)"
-        }
-      ],
-    },
+          label: 'じゃんけん',
+          data: [1, 0],
+          backgroundColor: ['rgb(255, 99, 132)',
+      'rgb(54, 162, 235)'],
     options: {
       title: {
         display: true,
-        text: '分'
+        text: 'じゃんけん'
       },
       scales: {
         yAxes: [{
@@ -124,7 +115,7 @@ document.getElementById("day0929").innerHTML
             suggestedMin: 0,
             stepSize: 100,
             callback: function(value, index, values){
-              return  value +  '目指せ10000分'
+              return  value +  ''
             }
           }
         }]
