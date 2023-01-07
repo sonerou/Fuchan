@@ -60,14 +60,16 @@ document.getElementById("day0929").innerHTML
           label: '時間',
           data: [165, 434],
           borderColor: "rgba(255,0,0,100)",
-          backgroundColor: "rgba(255,0,0,100)"
+          backgroundColor: "rgba(255,0,0,100)",
+	  yAxisID: "line",
         },
         {
 	  type: 'bar'
           label: '累計時間',
           data: [165, 599,],
           borderColor: "rgba(0,0,255,100)",
-          backgroundColor: "rgba(0,0,255,100)"
+          backgroundColor: "rgba(0,0,255,100)",
+	  yAxisID: "bar",
         }
       ],
     },
@@ -77,17 +79,15 @@ document.getElementById("day0929").innerHTML
         text: '目指せ10000分'
       },
       scales: {
-        yAxes: [{
-          ticks: {
-            suggestedMax: 650,
-            suggestedMin: 0,
-            stepSize: 100,
-            callback: function(value, index, values){
-              return  value +  '分'
-            }
-          }
-        }]
-      },
+              "line": {
+                type: "linear", 
+                position: "left",
+              },
+              "bar": {
+                type: "linear", 
+                position: "right",
+              }
+            },
     }
   });
   </script>
