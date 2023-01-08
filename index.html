@@ -52,19 +52,19 @@ document.getElementById("day0929").innerHTML
   <script>
   var ctx = document.getElementById("myLineChart");
   var myLineChart = new Chart(ctx, {
-    type: "bar",           // 一応棒グラフだとしておく
+    type: "bar", 
         data: {
-            labels:  ["00年", "05年", "10年", "15年", "20年"],
+            labels:  ["2022/12/7", "12/25"],
             datasets: [
                 {
-                    label: "生産量",
-                    data: [100, 200, 250, 150, 200],
+                    label: "累計時間",
+                    data: [165, 599],
                     backgroundColor: "rgba(255, 0, 0, 0.5)"
                 },
                 {
-                    type: "line",            // この系列を折線グラフだと指定
-                    label: "構成比",
-                    data: [ 20, 50, 10,  30,  40],
+                    type: "line",  
+                    label: "単時間",
+                    data: [ 165, 434]
                     borderWidth: 2,
                     borderColor: "blue",
                     tension: 0,
@@ -78,7 +78,7 @@ document.getElementById("day0929").innerHTML
             title: {
                 display: true,
                 fontSize: 20,
-                text: "複合グラフ（基本形）"
+                text: "目指せ10000分"
             },
             legend: {
                 position: 'bottom'
