@@ -52,45 +52,49 @@ document.getElementById("day0929").innerHTML
   <script>
   var ctx = document.getElementById("myLineChart");
   var myLineChart = new Chart(ctx, {
-    data: {
-	    
-      labels: ['12月7日', '12月25日'],
-      datasets: [
-        {
-
-          label: '時間',
-          data: [165, 434],
-          borderColor: "rgba(255,0,0,100)",
-          backgroundColor: "rgba(255,0,0,100)",
-	  yAxisID: "zikan",
+    type: "bar",           // 一応棒グラフだとしておく
+        data: {
+            labels:  ["00年", "05年", "10年", "15年", "20年"],
+            datasets: [
+                {
+                    label: "生産量",
+                    data: [100, 200, 250, 150, 200],
+                    backgroundColor: "rgba(255, 0, 0, 0.5)"
+                },
+                {
+                    type: "line",            // この系列を折線グラフだと指定
+                    label: "構成比",
+                    data: [ 20, 50, 10,  30,  40],
+                    borderWidth: 2,
+                    borderColor: "blue",
+                    tension: 0,
+                    fill: false,
+                    backgroundColor: "blue"
+                }
+            ]
         },
-        {
-          label: '累計時間',
-          data: [165, 599,],
-          borderColor: "rgba(0,0,255,100)",
-          backgroundColor: "rgba(0,0,255,100)",
-	  yAxisID: "ruikei",
-        }
-      ],
-    },
-    options: {
-      responsive: false,
-      title: {
-        display: true,
-        text: '目指せ10000分'
-      },
-      scales: {
-              "zikan": {
-                type: "linear", 
-                position: "left",
-              },
-              "ruikei": {
-                type: "linear", 
-                position: "right",
-              }
+        options: {
+            responsive: false,
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "複合グラフ（基本形）"
             },
-    }
-  });
+            legend: {
+                position: 'bottom'
+            },                
+            scales: {
+                yAxes: [
+                    {
+                        ticks: {
+                            min: 0
+                        }
+                    }
+                ]
+            }
+
+        }
+    });
   </script>
 
   <script>
